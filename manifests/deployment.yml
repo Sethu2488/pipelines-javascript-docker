@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: sethupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sethupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sethupipelinesjavascriptdocker 
+          image: aks1acr.azurecr.io/sethupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
